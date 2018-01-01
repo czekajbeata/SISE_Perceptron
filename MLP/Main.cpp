@@ -441,13 +441,13 @@ Network & configureForIris()
 
 Network & configureForSquareRoots()
 {
-	int learningCount = 20, testCount = 20; // sum to 50
+	int learningCount = 50, testCount = 100; // sum to 50
 	vector<vector<double>> learningInputs, learningOutputs, testInputs, testOutputs;
 
 	for (int i = 0; i < learningCount; i++) {
 		double randomNumber = ((double)rand() / RAND_MAX) * 100;
 		vector<double> input, output;
-		input.push_back(randomNumber/100.0);
+		input.push_back(randomNumber / 100.0);
 		//input.push_back(randomNumber);
 		double sqrtvar = sqrt(randomNumber) / 10.0;
 		//int sqrInt = (int)sqrtvar;
@@ -456,12 +456,12 @@ Network & configureForSquareRoots()
 		learningInputs.push_back(input);
 		learningOutputs.push_back(output);
 	}
-	
+
 	for (int i = 0; i < testCount; i++) {
-		double randomNumber = ((double)rand() / RAND_MAX) * 100;
+		double randomNumber = (i + 1)*(i + 1);// ((double)rand() / RAND_MAX) * 100;
 		vector<double> input, output;
-		input.push_back(randomNumber / 100.0);
-		double sqrtvar = sqrt(randomNumber)/10.0;
+		input.push_back(randomNumber / 10000.0);
+		double sqrtvar = sqrt(randomNumber) / 100.0;
 		int sqrInt = (int)sqrtvar;
 		output.push_back(sqrtvar);
 		testInputs.push_back(input);
@@ -478,21 +478,19 @@ Network & configureForSquareRoots()
 	Network * network = new Network(learningInputs, learningOutputs, useBias);
 
 	Layer layer1(3, 1, useBias);
-	Layer layer2(3, 3, useBias);
-	Layer layer3(1, 3, useBias);
+	Layer layer2(1, 3, useBias);
 
 	network->addLayer(layer1);
 	network->addLayer(layer2);
-	network->addLayer(layer3);
 	network->learn();
 
 	for (int i = 0; i < testInputs.size(); i++)
 	{
-		cout << "wejscie: " << testInputs[i].at(0) << " wyjscie oczekiwane: ";
+		cout << "wejscie: " << testInputs[i].at(0) * 10000 << " wyjscie oczekiwane: ";
 
-		cout << testOutputs[i][0] << " ";
+		cout << testOutputs[i][0] * 100 << " ";
 		auto output = network->calculate(testInputs[i]);
-		cout << " wyjscie: " << output[0];
+		cout << " wyjscie: " << output[0] * 100;
 		cout << endl;
 	}
 

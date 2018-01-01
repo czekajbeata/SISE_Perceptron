@@ -1,31 +1,31 @@
 #include "Calculations.h"
 class Neuron
 {
-	private:
+private:
 
-		const double WEIGHT_MIN = -1;
-		const double WEIGHT_MAX = 1;
-		const double LEARNING_RATE = 0.3;
-		const double MOMENTUM = 0.6;
-		
-		bool isBias;
+	const double WEIGHT_MIN = -1;
+	const double WEIGHT_MAX = 1;
+	const double LEARNING_RATE = 0.3;
+	const double MOMENTUM = 0.6;
 
-		double bias;
-		double deltaBias;
+	bool isBias;
 
-		std::vector<double> weights;
-		std::vector<double> deltaWeightsPrev;
+	double bias;
+	double deltaBias;
 
-		void randomWeights(int inputSize);
+	std::vector<double> weights;
+	std::vector<double> deltaWeightsPrev;
 
-	public:		
+	void randomWeights(int inputSize);
 
-		Neuron(int inputSize, bool bias);
-		
-		double calculate(std::vector<double> &input);
-		void learn(std::vector<double> &input, double error);
+public:
 
-		std::vector<double> getWeights();
+	Neuron(int inputSize, bool bias);
+
+	double calculate(std::vector<double> &input);
+	void learn(std::vector<double> &input, double error);
+
+	std::vector<double> getWeights();
 };
 
 
