@@ -1,5 +1,18 @@
-﻿  Main.cpp
-d:\onedrive\share\sem iv\inteligentna analiza danych\zadanie 3\final\mlp\mlp\Calculations.h(11): warning C4091: 'static ': ignored on left of 'Calculations' when no variable is declared
+﻿  stdafx.cpp
+  Calculations.cpp
+d:\studia\sem v\sise\perceptron\mlp\Calculations.h(11): warning C4091: 'static ': ignored on left of 'Calculations' when no variable is declared
+  FileManager.cpp
+  GnuplotManager.cpp
+d:\studia\sem v\sise\perceptron\mlp\gnuplot_i.hpp(954): warning C4297: 'Gnuplot::~Gnuplot': function assumed not to throw an exception but does
+  d:\studia\sem v\sise\perceptron\mlp\gnuplot_i.hpp(954): note: destructor or deallocator has a (possibly implicit) non-throwing exception specification
+d:\studia\sem v\sise\perceptron\mlp\gnuplot_i.hpp(1600): warning C4018: '<': signed/unsigned mismatch
+d:\studia\sem v\sise\perceptron\mlp\gnuplot_i.hpp(1602): warning C4018: '<': signed/unsigned mismatch
+d:\studia\sem v\sise\perceptron\mlp\gnuplot_i.hpp(1954): warning C4267: '-=': conversion from 'size_t' to 'int', possible loss of data
+  Layer.cpp
+d:\studia\sem v\sise\perceptron\mlp\Calculations.h(11): warning C4091: 'static ': ignored on left of 'Calculations' when no variable is declared
+Layer.cpp(57): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Main.cpp
+d:\studia\sem v\sise\perceptron\mlp\Calculations.h(11): warning C4091: 'static ': ignored on left of 'Calculations' when no variable is declared
 Main.cpp(34): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 Main.cpp(235): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
 Main.cpp(236): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
@@ -9,9 +22,16 @@ Main.cpp(384): warning C4244: '+=': conversion from 'double' to 'int', possible 
 Main.cpp(385): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
 Main.cpp(389): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 Main.cpp(394): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  Network.cpp
+d:\studia\sem v\sise\perceptron\mlp\Calculations.h(11): warning C4091: 'static ': ignored on left of 'Calculations' when no variable is declared
+Network.cpp(127): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Neuron.cpp
+d:\studia\sem v\sise\perceptron\mlp\Calculations.h(11): warning C4091: 'static ': ignored on left of 'Calculations' when no variable is declared
+  Statystyka.cpp
+Statystyka.cpp(38): warning C4244: 'initializing': conversion from 'std::chrono::system_clock::rep' to 'unsigned int', possible loss of data
   Generating code
-  0 of 702 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
+  685 of 702 functions (97.6%) were compiled, the rest were copied from previous compilation.
+    19 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  MLP.vcxproj -> D:\OneDrive\Share\Sem IV\Inteligentna Analiza Danych\Zadanie 3\Final\MLP\x64\Release\MLP.exe
+  MLP.vcxproj -> D:\Studia\Sem V\SISE\Perceptron\x64\Release\MLP.exe
