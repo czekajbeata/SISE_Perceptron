@@ -1,0 +1,14 @@
+﻿  Layer.cpp
+c:\users\ayron\desktop\cwiczenie 2.1\mlp\mlp\calculations.h(10): warning C4091: 'static ': ignored on left of 'Calculations' when no variable is declared
+c:\users\ayron\desktop\cwiczenie 2.1\mlp\mlp\layer.cpp(15): warning C4018: '<': signed/unsigned mismatch
+c:\users\ayron\desktop\cwiczenie 2.1\mlp\mlp\layer.cpp(27): warning C4018: '<': signed/unsigned mismatch
+c:\users\ayron\desktop\cwiczenie 2.1\mlp\mlp\layer.cpp(37): warning C4018: '<': signed/unsigned mismatch
+c:\users\ayron\desktop\cwiczenie 2.1\mlp\mlp\layer.cpp(46): warning C4018: '<': signed/unsigned mismatch
+c:\users\ayron\desktop\cwiczenie 2.1\mlp\mlp\layer.cpp(85): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  Neuron.cpp
+  Network.cpp
+  Main.cpp
+  MLP.vcxproj -> C:\Users\Ayron\Desktop\Cwiczenie 2.1\MLP\Debug\MLP.exe
+  MLP.vcxproj -> C:\Users\Ayron\Desktop\Cwiczenie 2.1\MLP\Debug\MLP.pdb (Full PDB)
