@@ -13,8 +13,8 @@ double Calculations::activation(double x)
 
 double Calculations::activationDerivative(double x)
 {
-	//return exp(x)/(pow((exp(x)+1), 2));
-	return x * (1.0 - x);
+	return exp(x)/(pow((exp(x)+1), 2));
+	//return x * (1.0 - x);
 }
 
 double Calculations::dRand(double min, double max)

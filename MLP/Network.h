@@ -13,9 +13,9 @@ class Network
 {
 	private:
 		#pragma region Constants
-		const double GLOBAL_ERROR_LIMIT = 0.000001;
+		const double GLOBAL_ERROR_LIMIT = 0.00001;
 		const double LEARNING_ERROR = 0.1;
-		const int MAX_ITERATION = 50000;
+		const int MAX_ITERATION = 2500;
 		const int GRAPH_STEP = 5;
 		#pragma endregion
 

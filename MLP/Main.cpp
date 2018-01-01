@@ -34,7 +34,7 @@ int main()
 	srand(time(NULL));
 
 	Network network = configureForSquareRoots();
-	//Network network = configureForWine();
+	//Network network = configureForIris();
 
 	FileManager::writeData("weights.data", network.getWeights());
 	FileManager::writeData("errors.data", network.getErrorsEpochsGraphSet());
@@ -44,10 +44,10 @@ int main()
 	std::cout << " Blad          : " << fixed << setprecision(10) << network.getError() << endl << endl;
 
 
-	/*GnuplotManager gnuplot;
+	GnuplotManager gnuplot;
 	gnuplot.plotErrorFile();
 	gnuplot = GnuplotManager();
-	gnuplot.plotOutputsFile();*/
+	gnuplot.plotOutputsFile();
 
 	cin.get();
 	cin.get();
@@ -441,29 +441,29 @@ Network & configureForIris()
 
 Network & configureForSquareRoots()
 {
-	int learningCount = 30, testCount = 20; // sum to 50
+	int learningCount = 20, testCount = 20; // sum to 50
 	vector<vector<double>> learningInputs, learningOutputs, testInputs, testOutputs;
 
 	for (int i = 0; i < learningCount; i++) {
 		double randomNumber = ((double)rand() / RAND_MAX) * 100;
-		vector<double> input, output(10);
-		input.push_back(randomNumber);
-		auto sqrtvar = sqrt(randomNumber);
-		int sqrInt = (int)sqrtvar;
-		output[sqrInt] = 1;
-
+		vector<double> input, output;
+		input.push_back(randomNumber/100.0);
+		//input.push_back(randomNumber);
+		double sqrtvar = sqrt(randomNumber) / 10.0;
+		//int sqrInt = (int)sqrtvar;
+		output.push_back(sqrtvar);
+		//output.push_back(0.5);
 		learningInputs.push_back(input);
 		learningOutputs.push_back(output);
 	}
+	
 	for (int i = 0; i < testCount; i++) {
 		double randomNumber = ((double)rand() / RAND_MAX) * 100;
-
-		vector<double> input, output(10);
-		input.push_back(randomNumber);
-		auto sqrtvar = sqrt(randomNumber);
-		int sqrInt = int(sqrtvar);
-		output[sqrInt] = 1;
-		
+		vector<double> input, output;
+		input.push_back(randomNumber / 100.0);
+		double sqrtvar = sqrt(randomNumber)/10.0;
+		int sqrInt = (int)sqrtvar;
+		output.push_back(sqrtvar);
 		testInputs.push_back(input);
 		testOutputs.push_back(output);
 	}
@@ -478,24 +478,21 @@ Network & configureForSquareRoots()
 	Network * network = new Network(learningInputs, learningOutputs, useBias);
 
 	Layer layer1(3, 1, useBias);
-	Layer layer2(10, 3, useBias);
+	Layer layer2(3, 3, useBias);
+	Layer layer3(1, 3, useBias);
 
 	network->addLayer(layer1);
 	network->addLayer(layer2);
+	network->addLayer(layer3);
 	network->learn();
 
 	for (int i = 0; i < testInputs.size(); i++)
 	{
 		cout << "wejscie: " << testInputs[i].at(0) << " wyjscie oczekiwane: ";
-		for (int j = 0; j < 10; j++) {			
-			cout << testOutputs[i][j] << " ";
-		}
-		cout << " wyjscie: ";
-		
-		for (int j = 0; j < 10; j++) {
-			auto x = network->calculate(testInputs[i]);
-			cout <<x[j]<<" ";
-		}
+
+		cout << testOutputs[i][0] << " ";
+		auto output = network->calculate(testInputs[i]);
+		cout << " wyjscie: " << output[0];
 		cout << endl;
 	}
 

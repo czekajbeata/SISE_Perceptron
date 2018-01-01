@@ -1,12 +1,23 @@
-﻿  Main.cpp
-d:\onedrive\share\sem iv\inteligentna analiza danych\zadanie 3\final\mlp\mlp\calculations.h(11): warning C4091: 'static ': ignored on left of 'Calculations' when no variable is declared
-d:\onedrive\share\sem iv\inteligentna analiza danych\zadanie 3\final\mlp\mlp\main.cpp(34): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-d:\onedrive\share\sem iv\inteligentna analiza danych\zadanie 3\final\mlp\mlp\main.cpp(235): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-d:\onedrive\share\sem iv\inteligentna analiza danych\zadanie 3\final\mlp\mlp\main.cpp(236): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-d:\onedrive\share\sem iv\inteligentna analiza danych\zadanie 3\final\mlp\mlp\main.cpp(240): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-d:\onedrive\share\sem iv\inteligentna analiza danych\zadanie 3\final\mlp\mlp\main.cpp(245): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-d:\onedrive\share\sem iv\inteligentna analiza danych\zadanie 3\final\mlp\mlp\main.cpp(384): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-d:\onedrive\share\sem iv\inteligentna analiza danych\zadanie 3\final\mlp\mlp\main.cpp(385): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-d:\onedrive\share\sem iv\inteligentna analiza danych\zadanie 3\final\mlp\mlp\main.cpp(389): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-d:\onedrive\share\sem iv\inteligentna analiza danych\zadanie 3\final\mlp\mlp\main.cpp(394): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-  MLP.vcxproj -> D:\OneDrive\Share\Sem IV\Inteligentna Analiza Danych\Zadanie 3\Final\MLP\x64\Debug\MLP.exe
+﻿  stdafx.cpp
+  Statystyka.cpp
+f:\studia\sem v\sise_perceptron\mlp\statystyka.cpp(38): warning C4244: 'initializing': conversion from 'std::chrono::system_clock::rep' to 'unsigned int', possible loss of data
+  Neuron.cpp
+f:\studia\sem v\sise_perceptron\mlp\calculations.h(11): warning C4091: 'static ': ignored on left of 'Calculations' when no variable is declared
+  Network.cpp
+f:\studia\sem v\sise_perceptron\mlp\calculations.h(11): warning C4091: 'static ': ignored on left of 'Calculations' when no variable is declared
+f:\studia\sem v\sise_perceptron\mlp\network.cpp(127): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Main.cpp
+f:\studia\sem v\sise_perceptron\mlp\calculations.h(11): warning C4091: 'static ': ignored on left of 'Calculations' when no variable is declared
+f:\studia\sem v\sise_perceptron\mlp\main.cpp(34): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+f:\studia\sem v\sise_perceptron\mlp\main.cpp(235): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+f:\studia\sem v\sise_perceptron\mlp\main.cpp(236): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+f:\studia\sem v\sise_perceptron\mlp\main.cpp(240): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+f:\studia\sem v\sise_perceptron\mlp\main.cpp(245): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+f:\studia\sem v\sise_perceptron\mlp\main.cpp(384): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+f:\studia\sem v\sise_perceptron\mlp\main.cpp(385): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+f:\studia\sem v\sise_perceptron\mlp\main.cpp(389): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+f:\studia\sem v\sise_perceptron\mlp\main.cpp(394): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  Layer.cpp
+f:\studia\sem v\sise_perceptron\mlp\calculations.h(11): warning C4091: 'static ': ignored on left of 'Calculations' when no variable is declared
+f:\studia\sem v\sise_perceptron\mlp\layer.cpp(57): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  GnuplotManager.cpp

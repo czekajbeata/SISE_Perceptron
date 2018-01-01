@@ -24,9 +24,8 @@ void Network::addLayer(Layer &layer)
 
 void Network::learn()
 {
-	int realExpectedGraphStep = MAX_ITERATION/1000;
-
-	do {		
+	int realExpectedGraphStep = MAX_ITERATION / 1000;
+	do {
 		error = 0;
 		if (iterator % realExpectedGraphStep == 0)
 		{
@@ -39,13 +38,13 @@ void Network::learn()
 			if (iterator % realExpectedGraphStep == 0)
 			{
 				realExpectedGraph.back()[0] = ((double)iterator);
-				if(areEqual(learner.learningOutput, calculate(learner.learningPoint)))
+				if (areEqual(learner.learningOutput, calculate(learner.learningPoint)))
 					realExpectedGraph.back()[1]++;
 			}
 			learnSingleLearner(learner);
 		}
 		if (realExpectedGraph.back()[1] > 0.85*learners.size())
-			realExpectedGraphStep = MAX_ITERATION/10;
+			realExpectedGraphStep = MAX_ITERATION / 10;
 
 		if (iterator % GRAPH_STEP == 0)
 			errorsEpochsGraphSet.push_back(vector<double>{(double)iterator, error});
@@ -104,7 +103,7 @@ bool Network::areEqual(vector<double> i1, vector<double> i2)
 	if (i1.size() != i2.size())
 		return false;
 	for (int i = 0; i < i1.size(); i++) {
-		if (fabs(i1[i] - i2[i])>(LEARNING_ERROR))
+		if (fabs(i1[i] - i2[i]) > (LEARNING_ERROR))
 			return false;
 	}
 	return true;
@@ -116,13 +115,13 @@ void Network::learnSingleLearner(Learner& learner)
 
 	//dla kazdej liczy wyjscie OD POCZATKU - 
 	// PROPAGACJA W PRZOD
-		realOutputs[0] = layers[0].calculate(learner.learningPoint);
+	realOutputs[0] = layers[0].calculate(learner.learningPoint);
 	for (int i = 1; i < layers.size(); i++)
 		realOutputs[i] = layers[i].calculate(realOutputs[i - 1]);
-	
+
 	// LICZY BLAD NA WYJSCIU
 	localErrors[layers.size() - 1] = countOutputError(learner.learningOutput, realOutputs[layers.size() - 1]);
-	
+
 	// PROPAGACJA WSTECZ JAK MAMY BLAD NA WYJSCIU
 	for (int i = layers.size() - 1; i > 0; i--)
 		localErrors[i - 1] = countLocalErrorForOtherLayers(i - 1, realOutputs[i - 1], localErrors[i]);
@@ -142,7 +141,7 @@ bool Network::isNetworkLearnt() {
 vector<double> Network::countLocalErrorForOtherLayers(int layerIndex, std::vector<double>& actual, std::vector<double>& prevErrors)
 {
 	int prevLayerIndex = layerIndex + 1;
-	vector<double> localErrors(layers[layerIndex].getNumberOfNeurons());	
+	vector<double> localErrors(layers[layerIndex].getNumberOfNeurons());
 
 	for (int thisIndex = 0; thisIndex < localErrors.size(); thisIndex++) {
 		double error = 0;
@@ -157,8 +156,10 @@ vector<double> Network::countLocalErrorForOtherLayers(int layerIndex, std::vecto
 vector<double> Network::countOutputError(vector<double>& expected, vector<double>& actual)
 {
 	vector<double> localErrors(expected.size());
-	for (int i = 0; i < layers.back().getNumberOfNeurons(); i++) 
+	for (int i = 0; i < layers.back().getNumberOfNeurons(); i++)
+	{
 		localErrors[i] = Calculations::activationDerivative(actual[i]) * (expected[i] - actual[i]);
+	}
 	return localErrors;
 }
 
