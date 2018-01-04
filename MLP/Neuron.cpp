@@ -52,7 +52,7 @@ void Neuron::learn(std::vector<double>& input, double error)
 	}
 }
 
-vector<double> Neuron::getWeights()
+vector<long double> Neuron::getWeights()
 {
 	return weights;
 }

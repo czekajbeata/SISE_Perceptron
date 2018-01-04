@@ -13,10 +13,10 @@ class Network
 {
 	private:
 		#pragma region Constants
-		const double GLOBAL_ERROR_LIMIT = 0.00001;
+		const double GLOBAL_ERROR_LIMIT = 0.00000001;
 		const double LEARNING_ERROR = 0.1;
-		const int MAX_ITERATION = 50000;
-		const int GRAPH_STEP = 5;
+		const int MAX_ITERATION = 100000000000;
+		const int GRAPH_STEP = 50;
 		#pragma endregion
 
 		#pragma region Fields
