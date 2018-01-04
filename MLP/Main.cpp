@@ -57,8 +57,7 @@ Network & configureForSquareRoots()
 		double randomNumber = (i + 1)*(i + 1);
 		vector<double> input, output;
 		input.push_back(randomNumber / (double)(testCount*testCount));
-		double sqrtvar = sqrt(randomNumber) / 100.0;
-		int sqrInt = (int)sqrtvar;
+		double sqrtvar = sqrt(randomNumber) / (double)testCount;
 		output.push_back(sqrtvar);
 		testInputs.push_back(input);
 		testOutputs.push_back(output);

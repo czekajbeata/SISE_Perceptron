@@ -10,11 +10,11 @@ private:
 
 	bool isBias;
 
-	long double bias;
-	long double deltaBias;
+	double bias;
+	double deltaBias;
 
-	std::vector<long double> weights;
-	std::vector<long double> deltaWeightsPrev;
+	std::vector<double> weights;
+	std::vector<double> deltaWeightsPrev;
 
 	void randomWeights(int inputSize);
 
@@ -25,7 +25,7 @@ public:
 	double calculate(std::vector<double> &input);
 	void learn(std::vector<double> &input, double error);
 
-	std::vector<long double> getWeights();
+	std::vector<double> getWeights();
 };
 
 
