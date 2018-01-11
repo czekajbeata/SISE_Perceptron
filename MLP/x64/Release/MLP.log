@@ -1,28 +1,10 @@
-﻿  stdafx.cpp
-  Calculations.cpp
-f:\studia\sem v\sise_perceptron\mlp\Calculations.h(11): warning C4091: 'static ': ignored on left of 'Calculations' when no variable is declared
-  FileManager.cpp
-  GnuplotManager.cpp
-f:\studia\sem v\sise_perceptron\mlp\gnuplot_i.hpp(954): warning C4297: 'Gnuplot::~Gnuplot': function assumed not to throw an exception but does
-  f:\studia\sem v\sise_perceptron\mlp\gnuplot_i.hpp(954): note: destructor or deallocator has a (possibly implicit) non-throwing exception specification
-f:\studia\sem v\sise_perceptron\mlp\gnuplot_i.hpp(1600): warning C4018: '<': signed/unsigned mismatch
-f:\studia\sem v\sise_perceptron\mlp\gnuplot_i.hpp(1602): warning C4018: '<': signed/unsigned mismatch
-f:\studia\sem v\sise_perceptron\mlp\gnuplot_i.hpp(1954): warning C4267: '-=': conversion from 'size_t' to 'int', possible loss of data
-  Layer.cpp
-f:\studia\sem v\sise_perceptron\mlp\Calculations.h(11): warning C4091: 'static ': ignored on left of 'Calculations' when no variable is declared
-Layer.cpp(57): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+﻿  FileManager.cpp
   Main.cpp
-f:\studia\sem v\sise_perceptron\mlp\Calculations.h(11): warning C4091: 'static ': ignored on left of 'Calculations' when no variable is declared
+c:\users\ayron\source\repos\sise_perceptron\mlp\Calculations.h(11): warning C4091: 'static ': ignored on left of 'Calculations' when no variable is declared
 Main.cpp(19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Network.cpp
-f:\studia\sem v\sise_perceptron\mlp\Calculations.h(11): warning C4091: 'static ': ignored on left of 'Calculations' when no variable is declared
-Network.cpp(126): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  Neuron.cpp
-f:\studia\sem v\sise_perceptron\mlp\Calculations.h(11): warning C4091: 'static ': ignored on left of 'Calculations' when no variable is declared
-  Statystyka.cpp
-Statystyka.cpp(38): warning C4244: 'initializing': conversion from 'std::chrono::system_clock::rep' to 'unsigned int', possible loss of data
   Generating code
-f:\studia\sem v\sise_perceptron\mlp\gnuplot_i.hpp(1874): warning C4715: 'Gnuplot::file_available': not all control paths return a value
-  All 877 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  0 of 877 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    22 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  MLP.vcxproj -> F:\Studia\Sem V\SISE_Perceptron\x64\Release\MLP.exe
+  MLP.vcxproj -> C:\Users\Ayron\source\repos\SISE_Perceptron\x64\Release\MLP.exe

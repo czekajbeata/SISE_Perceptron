@@ -15,7 +15,7 @@ class Network
 		#pragma region Constants
 		const double GLOBAL_ERROR_LIMIT = 0.00000000001;
 		const double LEARNING_ERROR = 0.1;
-		const int MAX_ITERATION = 10000000;
+		const int MAX_ITERATION = 10000;
 		const int GRAPH_STEP = 100;
 		#pragma endregion
 
